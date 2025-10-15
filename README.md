@@ -1,7 +1,5 @@
 # Mini Home Banking (Aplicación de Escritorio)
 
-![UML](MiniHomeBanking.puml)
-
 ## Descripción
 Este es un **sistema de mini home banking de escritorio** desarrollado en **Java**, utilizando **Swing** para la interfaz de usuario y **JDBC** para la interacción con la base de datos.  
 La aplicación permite a los usuarios gestionar cuentas bancarias y tarjetas de crédito, realizar transferencias, ver historiales de transacciones y generar resúmenes de cuentas.  
@@ -21,5 +19,5 @@ Los administradores pueden crear usuarios y asignarles productos bancarios.
 
 
 
-## Tecnologías
+## Diagrama UML (Code: ![UML](MiniHomeBanking.puml))
 <img width="1194" height="788" alt="image" src="https://github.com/user-attachments/assets/74c1c7dd-189e-4b52-a0db-71120207e1d7" />
