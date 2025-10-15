@@ -17,7 +17,15 @@ Los administradores pueden crear usuarios y asignarles productos bancarios.
 - JDBC para la interacción con la base de datos  
 - PlantUML para la documentación de diseño orientado a objetos
 
-
+## Instalación
+1. Clonar el repositorio:  
+   ```bash
+   git clone https://github.com/tu-usuario/MiniHomeBanking.git
+   ```
+2. Abrir el proyecto en tu IDE de Java favorito (Eclipse, IntelliJ, NetBeans).
+3. Configurar la base de datos en MySQL/PostgreSQL y actualizar los parámetros de conexión en el proyecto.
+4. Compilar y ejecutar la aplicación.
+   
 
 ## Diagrama UML (Code: ![UML](MiniHomeBanking.puml))
 <img width="1194" height="788" alt="image" src="https://github.com/user-attachments/assets/74c1c7dd-189e-4b52-a0db-71120207e1d7" />
