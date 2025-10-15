@@ -1,5 +1,5 @@
 @startuml
-title Mini Home Banking System - Class Diagram
+title Mini Home Banking System - Class Diagram (with Abstract User)
 
 ' =====================
 ' ENUMERATIONS
@@ -10,8 +10,20 @@ enum TransactionType {
 }
 
 ' =====================
-' ABSTRACT CLASS
+' ABSTRACT CLASSES
 ' =====================
+abstract class User {
+  - String username
+  - String firstName
+  - String lastName
+  - int nationalId
+  - String email
+  - String address
+  - String password
+  
+  + abstract boolean authenticate(String username, String password)
+}
+
 abstract class BankProduct {
   - int id
   - double balance
@@ -26,24 +38,18 @@ abstract class BankProduct {
 ' =====================
 ' CLASSES
 ' =====================
-
-class User {
-  - int id
-  - String username
-  - String firstName
-  - String lastName
-  - String nationalId
-  - String email
-  - String password
-  - String address
-  - boolean isAdmin
+class Customer extends User {
   - List<Account> accounts
   - List<Card> cards
 
-  + void addAccount(Account account)
-  + void addCard(Card card)
+  + void transfer(Account from, Account to, double amount)
   + List<Account> getAccounts()
-  + boolean authenticate(String user, String pass)
+}
+
+class Employee extends User {
+  + void createUser(String firstName, String lastName, String username, String password)
+  + void createAccount(Customer customer, Account account)
+  + void registerCardCharge(Card card, double amount, String description)
 }
 
 class Account extends BankProduct {
@@ -96,13 +102,21 @@ class Audit {
 ' =====================
 ' RELATIONSHIPS
 ' =====================
-User "1" -- "many" Account : owns >
-User "1" -- "many" Card : owns >
+User <|-- Customer
+User <|-- Employee
+
 BankProduct <|-- Account
 BankProduct <|-- Card
+
+Customer "1" -- "many" Account : owns >
+Customer "1" -- "many" Card : owns >
 BankProduct "1" -- "many" Transaction : records >
+
 Transfer "1" --> Account : origin >
 Transfer "1" --> Account : destination >
+
 Audit "many" --> User : logs actions of >
 
 @enduml
+
+
