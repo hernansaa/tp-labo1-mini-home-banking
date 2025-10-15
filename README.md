@@ -18,3 +18,8 @@ Los administradores pueden crear usuarios y asignarles productos bancarios.
 - Java (Swing para la GUI)  
 - JDBC para la interacción con la base de datos  
 - PlantUML para la documentación de diseño orientado a objetos
+
+
+
+## Tecnologías
+<img width="1194" height="788" alt="image" src="https://github.com/user-attachments/assets/74c1c7dd-189e-4b52-a0db-71120207e1d7" />
