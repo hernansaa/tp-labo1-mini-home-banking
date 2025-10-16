@@ -30,3 +30,5 @@ Los administradores pueden crear usuarios y asignarles productos bancarios.
 ## Diagrama de Clases UML (PLantUML Code: ![UML](MiniHomeBanking.puml))
 <img width="1931" height="897" alt="image" src="https://github.com/user-attachments/assets/ab6c4498-4fcd-4c51-b52e-ec8de0001451" />
 
+## Idea para UI
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ee178fd7-7f99-4479-969f-f208dabf4e40" />
